@@ -1,26 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ComponentLifeCycleExampleFunctional } from './basics/component_lifecycle';
+import { PerformanceSection } from './performance';
+import { UseMemoExample } from './performance/useMemo';
+import { MemoExample } from './performance/memo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter >
+      <Routes>
+        <Route path='/' element={<TopicsList></TopicsList>} />
+        <Route path='/lifecycle_functional' element={<ComponentLifeCycleExampleFunctional></ComponentLifeCycleExampleFunctional>} />
+        <Route path='/performance' element={<PerformanceSection />}>
+          <Route path='usememo' element={<UseMemoExample />} />
+          <Route path='memo' element={<MemoExample />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
+}
+
+function TopicsList() {
+  return <>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/lifecycle_functional">Component lifecycle functional</a></li>
+      <li><a href="/performance">Performance</a></li>
+    </ul>
+  </>
 }
 
 export default App;
