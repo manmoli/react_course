@@ -6,6 +6,7 @@ import { ComponentLifeCycleExampleFunctional } from './basics/component_lifecycl
 import { PerformanceSection } from './performance';
 import { UseMemoExample } from './performance/useMemo';
 import { MemoExample } from './performance/memo';
+import { UseCallbackExample } from './performance/useCallback';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/performance' element={<PerformanceSection />}>
           <Route path='usememo' element={<UseMemoExample />} />
           <Route path='memo' element={<MemoExample />} />
+          <Route path='usecallback' element={<UseCallbackExample />} />
         </Route>
       </Routes>
     </BrowserRouter>
