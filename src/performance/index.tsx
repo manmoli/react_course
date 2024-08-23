@@ -7,6 +7,7 @@ export const PerformanceSection: React.FC = () => {
             <li><Link to={'/performance/usememo'}>useMemo</Link></li>
             <li><Link to={'/performance/memo'}>memo</Link></li>
             <li><Link to={'/performance/usecallback'}>useCallback</Link></li>
+            <li><Link to={'/performance/lazy'}>Lazy loading</Link></li>
         </ul>
         <div style={{ border: '1px solid', padding: '10px', margin: '10px'}}>
             <Outlet></Outlet>

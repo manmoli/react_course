@@ -7,6 +7,7 @@ import { PerformanceSection } from './performance';
 import { UseMemoExample } from './performance/useMemo';
 import { MemoExample } from './performance/memo';
 import { UseCallbackExample } from './performance/useCallback';
+import { LazyLoadingExample } from './performance/lazy_loading';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='usememo' element={<UseMemoExample />} />
           <Route path='memo' element={<MemoExample />} />
           <Route path='usecallback' element={<UseCallbackExample />} />
+          <Route path='lazy' element={<LazyLoadingExample />} />
         </Route>
       </Routes>
     </BrowserRouter>
