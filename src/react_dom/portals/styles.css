@@ -1,0 +1,26 @@
+.innerContainer1 {
+    position: relative;
+    background-color: aquamarine;
+    height: 200px;
+    margin: 10px;
+}
+
+.innerContainer2 {
+    position: relative;
+    background-color: blueviolet;
+    height: 200px;
+    margin: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: chocolate;
+    border: 2px solid #000;
+    z-index: 1000;
+  }
